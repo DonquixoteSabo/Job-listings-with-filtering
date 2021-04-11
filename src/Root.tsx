@@ -1,8 +1,16 @@
+import { ThemeProvider } from 'styled-components';
+//styles
+import { theme } from 'assets/styles/theme';
+import { GlobalStyle } from 'assets/styles/GlobalStyle';
+
 const Root = () => {
   return (
-    <div className='appeczka'>
-      <header className='App-header'>siema</header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <header>siemaaa</header>
+      </ThemeProvider>
+    </>
   );
 };
 
