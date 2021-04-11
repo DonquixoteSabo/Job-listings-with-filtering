@@ -2,10 +2,10 @@ import * as TYPE from 'types/actionTypes';
 
 import data from 'api/data.json';
 
-const initialState = data;
+const initialState: State = { companies: data };
 
 const reducer = (
-  state = initialState,
+  state: State = initialState,
   action: { type: string; payload: any }
 ) => {
   switch (action.type) {
