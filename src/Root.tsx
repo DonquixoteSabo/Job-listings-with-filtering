@@ -1,5 +1,5 @@
-//views
-import MainTemplate from 'pages/MainTemplate';
+//templates
+import MainTemplate from 'components/templates/MainTemplate';
 //Providers
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';

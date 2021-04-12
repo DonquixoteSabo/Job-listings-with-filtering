@@ -1,9 +1,9 @@
-interface Props {
-  text: string;
-}
-
-const CompanyCard: React.FC<Props> = ({ text }) => {
-  return <li>S{text}</li>;
+const CompanyCard: React.FC<Company> = ({ company, role }) => {
+  return (
+    <li>
+      {company}, {role}{' '}
+    </li>
+  );
 };
 
 export default CompanyCard;
