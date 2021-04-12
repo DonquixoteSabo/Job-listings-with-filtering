@@ -1,3 +1,5 @@
+//views
+import MainTemplate from 'pages/MainTemplate';
 //Providers
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
@@ -13,7 +15,7 @@ const Root = () => {
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <header>siemaaa</header>
+          <MainTemplate />
         </ThemeProvider>
       </Provider>
     </>
