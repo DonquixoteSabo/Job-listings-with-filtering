@@ -1,5 +1,7 @@
 //I will extract it to new files later :D
 import styled from 'styled-components';
+//types
+import { Company } from 'types/company';
 
 const Card = styled.li`
   width: 100%;
@@ -15,12 +17,12 @@ const Img = styled.img`
   border-radius: 50%;
 `;
 
-const CompanyCard: React.FC<Company> = ({ company, role, logo }) => {
+const CompanyCard = ({ company, role, logo }: Company) => {
   return (
     <Card>
-      <Img src={process.env.PUBLIC_URL + logo} />
+      <Img src={process.env.PUBLIC_URL + logo} alt={`${company} logo`} />
     </Card>
   );
 };
 
-export default CompanyCard;
+export { CompanyCard };

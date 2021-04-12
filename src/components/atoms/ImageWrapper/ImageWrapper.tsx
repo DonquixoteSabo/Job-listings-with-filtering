@@ -17,4 +17,4 @@ const ImageWrapper = () => {
   );
 };
 
-export default ImageWrapper;
+export { ImageWrapper };

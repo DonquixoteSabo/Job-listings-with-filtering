@@ -1,24 +1,19 @@
-import { connect } from 'react-redux';
 //components
-import CompanyCard from 'components/molecules/CompanyCard/CompanyCard';
+import { CompanyCard } from 'components/molecules/CompanyCard/CompanyCard';
 //styles
 import { Wrapper } from './CompaniesList.styles';
+//types
+import { Company } from 'types/company';
 
-const List: React.FC<State> = ({ companies }) => {
-  console.log(companies);
+const List = () => {
+  const companies = [];
   return (
     <Wrapper>
-      {companies.map((company: Company) => (
+      {/* {companies.map((company: Company) => (
         <CompanyCard key={company.id} {...company} />
-      ))}
+      ))} */}
     </Wrapper>
   );
 };
 
-const mapStateToProps = (state: State) => {
-  return {
-    companies: state.companies,
-  };
-};
-
-export default connect(mapStateToProps)(List);
+export { List };
