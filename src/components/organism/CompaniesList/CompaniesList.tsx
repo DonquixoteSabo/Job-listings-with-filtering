@@ -8,8 +8,9 @@ const List: React.FC<State> = ({ companies }) => {
   console.log(companies);
   return (
     <Wrapper>
-      <CompanyCard text='SIEMAA KOMPANIA' />
-      <CompanyCard text='CO tam u was' />
+      {companies.map((company: Company) => (
+        <CompanyCard key={company.id} {...company} />
+      ))}
     </Wrapper>
   );
 };
