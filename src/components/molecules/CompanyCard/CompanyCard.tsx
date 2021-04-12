@@ -68,6 +68,24 @@ const CardBody = styled.div`
   }
 `;
 
+const Filters = styled.ul`
+  height: 100%;
+  margin-left: auto;
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  li {
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.lightCyan_2};
+    font-weight: 700;
+    font-size: 12px;
+    padding: 0 10px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+  }
+`;
+
 const CompanyCard = ({
   company,
   logo,
@@ -98,6 +116,16 @@ const CompanyCard = ({
           <p>{location}</p>
         </div>
       </CardBody>
+      <Filters>
+        {role && <li>{role}</li>}
+        {level && <li>{level}</li>}
+        {tools.map((tool) => (
+          <li key={tool}>{tool}</li>
+        ))}
+        {languages.map((language) => (
+          <li key={language}>{language}</li>
+        ))}
+      </Filters>
     </Card>
   );
 };
