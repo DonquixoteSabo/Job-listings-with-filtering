@@ -10,7 +10,7 @@ const ImageWrapper = () => {
         />
         <img
           src={process.env.PUBLIC_URL + '/images/bg-header-mobile.svg'}
-          alt='header'
+          alt='Delicate green background'
         />
       </picture>
     </Wrapper>
