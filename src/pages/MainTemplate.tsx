@@ -1,6 +1,6 @@
 //components
 import { ImageWrapper } from 'components/atoms/ImageWrapper/ImageWrapper';
-import { List } from 'components/organism/CompaniesList/CompaniesList';
+import { List } from 'components/templates/CompaniesList/CompaniesList';
 
 const MainTemplate = () => {
   return (

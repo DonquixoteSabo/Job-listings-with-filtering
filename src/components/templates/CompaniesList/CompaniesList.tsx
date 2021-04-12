@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 //components
-import { CompanyCard } from 'components/molecules/CompanyCard/CompanyCard';
+import { CompanyCard } from 'components/organism/CompanyCard/CompanyCard';
 //styles
 import { Wrapper } from './CompaniesList.styles';
 //types
@@ -9,7 +9,6 @@ import { State } from 'types/state';
 
 const List = () => {
   const companies = useSelector((state: State) => state.companies);
-  console.log(companies);
 
   return (
     <Wrapper>
