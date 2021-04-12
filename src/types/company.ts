@@ -2,7 +2,7 @@ export interface Company {
   id: number;
   company: string;
   logo: string;
-  new: boolean;
+  isNew: boolean;
   featured: boolean;
   position: string;
   role: string;

@@ -9,6 +9,8 @@ import { State } from 'types/state';
 
 const List = () => {
   const companies = useSelector((state: State) => state.companies);
+  console.log(companies);
+
   return (
     <Wrapper>
       {companies.map((company: Company) => (
