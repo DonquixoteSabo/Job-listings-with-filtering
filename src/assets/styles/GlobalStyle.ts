@@ -44,4 +44,9 @@ table {
 html, body {
   font-family: 'Spartan', sans-serif;
 }
+
+body {
+background-color: ${({ theme }) => theme.colors.lightCyan_1};
+}
+
 `;
