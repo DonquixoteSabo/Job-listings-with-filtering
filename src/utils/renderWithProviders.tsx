@@ -43,6 +43,38 @@ const initialState: State = {
       tools: ['Sass'],
     },
   ],
+  filteredCompanies: [
+    {
+      id: 1,
+      company: 'Shortly',
+      logo: '/images/shortly.svg',
+      isNew: true,
+      featured: false,
+      position: 'Junior Developer',
+      role: 'Frontend',
+      level: 'Junior',
+      postedAt: '2w ago',
+      contract: 'Full Time',
+      location: 'Worldwide',
+      languages: ['HTML', 'JavaScript'],
+      tools: ['Sass'],
+    },
+    {
+      id: 2,
+      company: 'Testers',
+      logo: '/images/shortly.svg',
+      isNew: false,
+      featured: false,
+      position: 'Junior Developer',
+      role: 'Full Stack Engineer',
+      level: 'Full Stack',
+      postedAt: '2w ago',
+      contract: 'Full Time',
+      location: 'Worldwide',
+      languages: ['HTML', 'JavaScript'],
+      tools: ['Sass'],
+    },
+  ],
 };
 
 export const renderWithProviders = (children: React.ReactNode) => {

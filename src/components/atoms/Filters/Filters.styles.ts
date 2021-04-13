@@ -15,5 +15,10 @@ export const Wrapper = styled.ul`
     margin-left: 15px !important;
     display: flex;
     align-items: center;
+    transition: 0.5s;
+    &:hover {
+      color: #fff;
+      background-color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
