@@ -4,7 +4,7 @@ import { State } from 'types/state';
 //API
 import data from 'api/data.json';
 
-const initialState: State = { companies: data };
+const initialState: State = { companies: data, filteredCompanies: data };
 
 // payload will take arrays with multiple object, I will define these objects a little bit later :D
 const reducer = (

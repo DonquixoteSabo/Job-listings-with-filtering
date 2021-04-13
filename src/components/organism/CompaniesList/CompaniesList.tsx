@@ -8,7 +8,7 @@ import { Company } from 'types/company';
 import { State } from 'types/state';
 
 const List = () => {
-  const companies = useSelector((state: State) => state.companies);
+  const companies = useSelector((state: State) => state.filteredCompanies);
 
   return (
     <Wrapper>
