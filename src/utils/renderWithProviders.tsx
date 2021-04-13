@@ -75,6 +75,7 @@ const initialState: State = {
       tools: ['Sass'],
     },
   ],
+  filters: [],
 };
 
 export const renderWithProviders = (children: React.ReactNode) => {
