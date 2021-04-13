@@ -13,6 +13,7 @@ import { Filter, Bar } from './FilterBar.styles';
 const FilterBar = () => {
   const filters = useSelector((state: State) => state.filters);
   const dispatch = useDispatch();
+  const uniqFilters = [...new Set(filters)];
 
   const handleClick = (filter: string) => {
     if (filter === 'all') {
@@ -25,7 +26,7 @@ const FilterBar = () => {
 
   return (
     <Bar>
-      {filters.map((filter: string) => (
+      {uniqFilters.map((filter: string) => (
         <Filter key={filter}>
           {filter}
           <button onClick={() => handleClick(filter)}>X</button>
