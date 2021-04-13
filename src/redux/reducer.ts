@@ -13,10 +13,8 @@ const reducer = (
 ) => {
   switch (action.type) {
     case TYPE.FILTER:
-      const filteredCompanies = filterArray(
-        state.filteredCompanies,
-        action.payload
-      );
+      const filteredCompanies = filterArray(state.companies, action.payload);
+
       return { ...state, filteredCompanies };
     default:
       return state;

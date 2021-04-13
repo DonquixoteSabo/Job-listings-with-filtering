@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 //components
 import { CompanyCard } from 'components/molecules/CompanyCard/CompanyCard';
+import { FilterBar } from 'components/molecules/FilterBar/FilterBar';
 //styles
 import { Wrapper } from './CompaniesList.styles';
 //types
@@ -18,12 +19,26 @@ const List = () => {
     setActiveFilters([...activeFilters, text]);
   };
 
+  const handleDeleteFilter = (text: string) => {
+    if (text === 'all') {
+      return setActiveFilters([]);
+    }
+    const filters = activeFilters.filter((filter: string) => filter !== text);
+    setActiveFilters(filters);
+  };
+
   useEffect(() => {
     dispatch(filterCompanies(activeFilters));
   }, [dispatch, activeFilters]);
 
   return (
     <Wrapper>
+      {activeFilters.length > 0 && (
+        <FilterBar
+          filters={activeFilters}
+          handleDeleteFilter={handleDeleteFilter}
+        />
+      )}
       {companies.map((company: Company) => (
         <CompanyCard
           key={company.id}
