@@ -1,11 +1,15 @@
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 //components
-import CompanyCard from 'components/molecules/CompanyCard/CompanyCard';
+import { CompanyCard } from 'components/molecules/CompanyCard/CompanyCard';
 //styles
 import { Wrapper } from './CompaniesList.styles';
+//types
+import { Company } from 'types/company';
+import { State } from 'types/state';
 
-const List: React.FC<State> = ({ companies }) => {
-  console.log(companies);
+const List = () => {
+  const companies = useSelector((state: State) => state.companies);
+
   return (
     <Wrapper>
       {companies.map((company: Company) => (
@@ -15,10 +19,4 @@ const List: React.FC<State> = ({ companies }) => {
   );
 };
 
-const mapStateToProps = (state: State) => {
-  return {
-    companies: state.companies,
-  };
-};
-
-export default connect(mapStateToProps)(List);
+export { List };
