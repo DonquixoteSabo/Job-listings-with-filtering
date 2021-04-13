@@ -5,10 +5,6 @@ import { Card, Img } from './CompanyCard.styles';
 //types
 import { Company } from 'types/company';
 
-interface Props extends Company {
-  handleFilter: (a: string) => void;
-}
-
 const CompanyCard = ({
   company,
   logo,
@@ -22,8 +18,7 @@ const CompanyCard = ({
   languages,
   isNew,
   tools,
-  handleFilter,
-}: Props) => {
+}: Company) => {
   return (
     <Card>
       <Img src={process.env.PUBLIC_URL + logo} alt={`${company} logo`} />
@@ -36,13 +31,7 @@ const CompanyCard = ({
         isNew={isNew}
         company={company}
       />
-      <Filters
-        role={role}
-        tools={tools}
-        languages={languages}
-        level={level}
-        handleFilter={handleFilter}
-      />
+      <Filters role={role} tools={tools} languages={languages} level={level} />
     </Card>
   );
 };
