@@ -1,4 +1,4 @@
-import { Filters } from 'components/molecules/Filters/Filters';
+import { Filters } from 'components/atoms/Filters/Filters';
 import { CardBody } from 'components/atoms/CardBody/CardBody';
 //styles
 import { Card, Img } from './CompanyCard.styles';
