@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 //components
-import { CompanyCard } from 'components/organism/CompanyCard/CompanyCard';
+import { CompanyCard } from 'components/molecules/CompanyCard/CompanyCard';
 //styles
 import { Wrapper } from './CompaniesList.styles';
 //types

@@ -17,7 +17,7 @@ describe('CompaniesList Component', () => {
     expect(screen.getByText(/New!/)).toBeInTheDocument();
     expect(screen.queryByText(/FEATURED/)).not.toBeInTheDocument();
   });
-  it('render proper alt tag', () => {
+  it('renders proper alt tag', () => {
     renderWithProviders(<List />);
 
     expect(screen.getByAltText(/Shortly logo/)).toBeInTheDocument();

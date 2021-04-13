@@ -1,5 +1,5 @@
 import { Filters } from 'components/molecules/Filters/Filters';
-import { CardBody } from 'components/molecules/CardBody/CardBody';
+import { CardBody } from 'components/atoms/CardBody/CardBody';
 //styles
 import { Card, Img } from './CompanyCard.styles';
 //types
